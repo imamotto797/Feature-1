@@ -63,7 +63,7 @@ async def summarize_cv(cv_text: str) -> CVSummary:
         with OpenRouter(
             api_key=OPENROUTER_API_KEY,
             http_referer=HTTP_REFERER,  # optional – helps with rankings
-            x_open_router_title=X_TITLE,  # optional – app display name
+            x_title=X_TITLE,  # optional – app display name
         ) as client:
             response = client.chat.send(
                 model="openai/gpt-4o-mini",  # fast & cheap; swap as needed

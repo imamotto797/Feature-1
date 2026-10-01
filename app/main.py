@@ -2,7 +2,6 @@
 FastAPI application – CV Summarizer API.
 
 Endpoints
----------
 POST /summarize
     Accepts a PDF file, extracts text, calls OpenRouter, and returns a
     structured JSON summary.
@@ -67,7 +66,6 @@ async def generic_exception_handler(request, exc: Exception):
 
 
 # Endpoint
-# ---------------------------------------------------------------------------
 @app.post(
     "/summarize",
     response_model=CVSummary,
@@ -109,9 +107,7 @@ async def summarize_cv_endpoint(
     return summary
 
 
-# ---------------------------------------------------------------------------
 # Health check (useful for deployment platforms)
-# ---------------------------------------------------------------------------
 @app.get("/health", tags=["ops"])
 async def health_check():
     """Simple liveness probe."""

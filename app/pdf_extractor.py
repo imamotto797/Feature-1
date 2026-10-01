@@ -12,6 +12,7 @@ from fastapi import HTTPException, UploadFile
 
 async def extract_text_from_pdf(file: UploadFile) -> str:
     """
+    Functions:
     Read an uploaded PDF file and return all extractable text.
 
     Parameters
